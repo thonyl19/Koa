@@ -1,0 +1,4 @@
+**/node_modules/*
+**/dist/**/*
+# --以下檔案,是以 link 方式建立,不需簽入 git
+*.bat
