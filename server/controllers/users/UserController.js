@@ -1,4 +1,12 @@
 class UserController {
+
+    async page(ctx, next){
+        // ctx.body = "user";
+        const title = 'hello koa2'
+        await ctx.render('index', {
+            title,
+        })
+    }
     // 用户登录
     async login(ctx, next) {
         // 获取请求提交的数据
