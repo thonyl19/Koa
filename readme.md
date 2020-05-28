@@ -6,3 +6,4 @@
 
 ### Ref
     [中文文檔](https://github.com/guo-yu/koa-guide)
+	[koa动态路由配置](https://www.itying.com/koa/start-dynamicrouting.html)
