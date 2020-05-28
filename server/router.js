@@ -1,13 +1,16 @@
 const router = require('koa-router')();
-const userctrl = require('./controllers/users/UserController');
+const _ = require('lodash');
+const user = require('./controllers/User');
+const pages = require('./controllers/Page');
+var _list = [pages,user];
 
-router
-    .post('/api/user/login', userctrl.login)
-    .get('/api/user/userinfo', userctrl.userInfo)
-    .get('/user', userctrl.page)
-    ;
-//  .put('xxx')
-//  .delete('xxx')
-
+_.each(_list,(grp)=>{
+    _.each(grp,(Funs,verb)=>{
+        _.each(Funs,(fn,url)=>{
+            console.log(`${verb}-${url}`)
+            router[verb](url,fn);
+        })
+    })
+})
 module.exports = router;
  
