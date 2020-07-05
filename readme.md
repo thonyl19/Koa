@@ -13,21 +13,32 @@ npm i koa -D
 ### Config 範例
 執行方式 
 ```
-    .\config$ run {example.js}
+    .\config$ node {example.js}
 ```
 #### 基本用例 
     (base_server.js)[./config/base_server.js]
 
 ### Cascading
-    (base_server.js)[./config/ex_Cascading.js]
+    (ex_Cascading.js)[./config/ex_Cascading.js]
 
 ### RESTful API 
+    (koa_restful.js)[./config/koa_restful.js]
     Ref
     [koa2实现restful api](https://juejin.im/post/5b1c870e5188257d8f0f22a6)
     需要搭配 
         \router\index.js
         \controllers\users\UserController.js
 
+### RESTful API + jwt
+    (koa_jwt.js)[./config/koa_jwt.js]
+    Ref
+    [koa+jwt实现token验证与刷新](https://segmentfault.com/a/1190000019338195)
+    需要搭配
+        \controllers\Auth.js  
+    範例重點:
+        1.jwt 的實現方式
+        2.jwt 檢控和例外放行方法
+        
 ### app.listen（...）
 
 ### 錯誤處理
