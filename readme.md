@@ -8,7 +8,7 @@
 
 安装 `koa`
 ```
-npm i koa -D
+npm i koa koa-router koa-bodyparser
 ```
 ### Config 範例
 執行方式 
